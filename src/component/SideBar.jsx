@@ -61,7 +61,7 @@ const SideBar = () => {
       </div>
 
       {/* menu icon for small screen */}
-      <div className="md:hidden fixed z-10">
+      <div className="md:hidden fixed left-0 z-10">
         <button>
           <IoMenu
             onClick={toggleMobileMenu}

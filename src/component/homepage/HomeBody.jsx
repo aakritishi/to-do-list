@@ -11,7 +11,7 @@ const HomeBody = () => {
     <div className="w-full flex max-h-screen flex-col-reverse md:flex-row gap=5">
       <div className="w-full md:w-[75%] mt-5">
         {/* boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
           <div className="bg-[#88d18a] shadow-md border border-gray-200 rounded-lg">
             <img src={study} className="h-[28vh] w-full" />
             <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded w-full">
