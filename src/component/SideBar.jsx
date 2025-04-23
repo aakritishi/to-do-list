@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sidebarimg from "../assets/sidebarimg.jpg";
+import sidebarimg2 from "../assets/sidebarimg2.jpg";
 import Calendar from "./homepage/Calendar";
 import { IoMenu } from "react-icons/io5";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -72,14 +73,19 @@ const SideBar = () => {
       {/* side bar for small screen */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed top-0 left-0 w-56 h-full z-40 bg-[#88d18a]"
+          className="md:hidden fixed top-0 left-0 w-56 h-full overflow-y-hidden z-40 bg-[#88d18a]"
           onClick={toggleMobileMenu}
         >
+          <div onCliclk={(e)=> e.stopPropagation()}>
           <ul className="">
             <li className="p-2 font-semibold text-xl text-center my-2 text-white">
               <div className="flex gap-5 items-center justify-between">
-                <p className="p-2 font-semibold text-xl text-center my-2 text-white">Home</p>
-                <span><FaArrowLeftLong/></span>
+                <p className="p-2 font-semibold text-xl text-center my-2 text-white">
+                  Home
+                </p>
+                <span>
+                  <FaArrowLeftLong />
+                </span>
               </div>
             </li>
             <li className="p-2 bg-green-500 text-xl text-center text-white rounded font-semibold">
@@ -98,7 +104,15 @@ const SideBar = () => {
             <li className="w-full overflow-x-auto px-3 rounded-lg shadow-md">
               <Calendar />
             </li>
+            <li>
+              <img
+                src={sidebarimg2}
+                alt="sidebarimg2"
+                className="w-full h-auto mb-2"
+              />
+            </li>
           </ul>
+            </div>
         </div>
       )}
     </div>
